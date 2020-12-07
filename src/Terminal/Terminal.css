@@ -1,0 +1,6 @@
+.terminal_dialog {
+    position : fixed;
+    background-color: red;
+    resize: both;
+    overflow: auto;
+}
