@@ -1,4 +1,5 @@
 import React from 'react';
+import TopBar from '../TopBar/TopBar.js'
 import './Terminal.css'
 
 
@@ -19,6 +20,12 @@ class TerminalWindow extends React.Component {
         }) 
     }
 
+    changePosition = () => {
+        let newTop = this.state.top + 10
+        let newLeft = this.state.left + 10
+        this.updatePosition(newTop, newLeft)
+    }
+
 
     render() {
         return (
@@ -29,7 +36,9 @@ class TerminalWindow extends React.Component {
                     left : String(this.state.left) + "px"
                 }}
             >
-                <p>Hello</p>
+                <div onClick={this.changePosition}>
+                    <TopBar title="Terminal"/>
+                </div>
             </div>
         )
     }
