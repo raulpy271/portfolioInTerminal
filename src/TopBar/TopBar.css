@@ -1,0 +1,36 @@
+.top_bar {
+    color : black;
+    background-color : #eee;
+}
+
+
+.top_bar:hover {
+    cursor : grab;
+}
+
+
+.buttons {
+    display : inline;
+    height : 100%;
+    width  : 100%;
+}
+
+
+#title {
+    display : inline;
+}
+
+
+.buttons:hover {
+    cursor : pointer;
+}
+
+
+.button {
+    border-radius : 100%;
+    float : right;
+    margin : 2%;
+    display : inline-block;
+}
+
+
