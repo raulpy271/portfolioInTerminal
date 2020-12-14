@@ -3,6 +3,8 @@
     position : relative;
     color : black;
     background-color : #eee;
+    text-align: center;
+    font-weight: bold;
 }
 
 
@@ -18,14 +20,15 @@
 }
 
 
-.buttons:hover {
-    cursor : pointer;
-}
-
-
 .button {
     display : inline-block;
     border-radius : 100%;
+}
+
+
+.button:hover {
+    cursor : pointer;
+    opacity : 20%;
 }
 
 
