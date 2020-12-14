@@ -7,8 +7,10 @@ class TerminalWindow extends React.Component {
     constructor(props) {
         super(props)
         this.state = {
-            top : 0,
-            left : 0
+            top :  25,
+            left : 25,
+            unit : "%"
+
         }
     }
 
@@ -20,9 +22,10 @@ class TerminalWindow extends React.Component {
         }) 
     }
 
+
     changePosition = () => {
-        let newTop = this.state.top + 10
-        let newLeft = this.state.left + 10
+        let newTop = this.state.top + 2
+        let newLeft = this.state.left + 2
         this.updatePosition(newTop, newLeft)
     }
 
@@ -32,8 +35,8 @@ class TerminalWindow extends React.Component {
             <div 
                 className="terminal_dialog"
                 style = {{
-                    top : String(this.state.top) + "px",
-                    left : String(this.state.left) + "px"
+                    "top"  : String(this.state.top)  + this.state.unit,
+                    "left" : String(this.state.left) + this.state.unit
                 }}
             >
                 <div onClick={this.changePosition}>

@@ -4,5 +4,9 @@
     color: #0f0;
     resize: both;
     overflow: auto;
+    width : 50%;
+    height : 50%;
     border-radius : 3%;
 }
+
+
