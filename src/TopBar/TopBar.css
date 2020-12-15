@@ -28,7 +28,13 @@
 
 .button:hover {
     cursor : pointer;
-    opacity : 20%;
+    box-shadow: 0px 0px 3px 1px;
+}
+
+
+.button:active {
+    opacity: 20%;
+    box-shadow: 0px 0px 6px 3px;
 }
 
 

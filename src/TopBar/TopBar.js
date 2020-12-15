@@ -2,11 +2,12 @@ import './TopBar.css'
 
 
 function Button(props) {
-    let len = 10
+    let len = 12
     let margin = len / 2
     return (
         <div className="button"
             style={{ 
+                "color" : props.color,
                 "backgroundColor" : props.color,
                 "width"  : String(len) + "px",
                 "height" : String(len) + "px",
