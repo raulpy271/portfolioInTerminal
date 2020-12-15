@@ -1,5 +1,6 @@
 import React from 'react';
 import TopBar from '../TopBar/TopBar.js'
+import TerminalOutput from '../TerminalOutput/TerminalOutput.js'
 import './Terminal.css'
 
 
@@ -7,8 +8,8 @@ class TerminalWindow extends React.Component {
     constructor(props) {
         super(props)
         this.state = {
-            top :  25,
-            left : 25,
+            top :  20,
+            left : 20,
             unit : "%"
 
         }
@@ -41,6 +42,9 @@ class TerminalWindow extends React.Component {
             >
                 <div onClick={this.changePosition}>
                     <TopBar title="Terminal"/>
+                </div>
+                <div className="terminalScreen">
+                    <TerminalOutput/>
                 </div>
             </div>
         )
