@@ -24,7 +24,7 @@ function TopBar(props) {
     let yellow = "#ff0"
     let green  = "#0f0"
     return (
-        <div className="top_bar" >
+        <div className="topBar" >
             <div className="buttons">
                 <Button color={red}/>
                 <Button color={yellow}/>

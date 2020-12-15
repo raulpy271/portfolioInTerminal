@@ -45,7 +45,7 @@ class TerminalWindow extends React.Component {
     render() {
         return (
             <div 
-                className="terminal_dialog"
+                className="terminalDialog"
                 style = {{
                     "top"  : String(this.state.top)  + this.state.unit,
                     "left" : String(this.state.left) + this.state.unit

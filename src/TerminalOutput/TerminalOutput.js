@@ -3,7 +3,7 @@ import './TerminalOutput.css'
 
 function TerminalOutput(props) {
     let text = `
-[raul@localhost portfolio_in_terminal_style]$ cat ASCII.art
+[raul@localhost]$ cat ASCII.art
             .-"""-.
            '       \\
           |,.  ,-.  |
@@ -27,8 +27,8 @@ function TerminalOutput(props) {
         text = props.text
     }
     return (
-        <div className="output-div">
-            <p id="output-text"> {text} </p>
+        <div className="outputDiv">
+            <p id="outputText"> {text} </p>
         </div>
     )
 }
