@@ -26,19 +26,21 @@ class TerminalWindow extends React.Component {
     updatePosition = mouseEvent => {
         let x = mouseEvent.movementX
         let y = mouseEvent.movementY
-        let newTop  = this.state.top  + x
-        let newLeft = this.state.left + y
+        let newTop  = this.state.top  + y
+        let newLeft = this.state.left + x
         this.setPosition(newTop, newLeft)
     }
 
 
     click = mouseEvent => {
-        window.addEventListener("onmousemove", this.updatePosition)
+        document.onmousemove = this.updatePosition
+        document.onmouseup = this.endClick
     }
 
 
     endClick = mouseEvent => {
-        window.removeEventListener("onmousemove", this.updatePosition)
+        document.onmousemove = null
+        document.onmouseup   = null
     }
 
 
@@ -51,8 +53,8 @@ class TerminalWindow extends React.Component {
                     "left" : String(this.state.left) + this.state.unit
                 }}
             >
-                <div onMouseDown={this.click}
-                     onMouseUp={this.endClick}
+                <div 
+                    onMouseDown={this.click}
                 >
                     <TopBar title="Terminal"/>
                 </div>
