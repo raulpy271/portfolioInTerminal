@@ -8,27 +8,42 @@ class TerminalWindow extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      top :  100,
-      left : 100,
-      unit : "px"
+      top :  0,
+      left : 0,
+      width : 0,
+      height : 0
     }
   }
 
 
-  setPosition = (top, left) => {
+  defaultSizeInPercentage = 60
+
+
+  componentDidMount = () => {
+    let heightOfScreen = window.innerHeight
+    let widthOfScreen = window.innerWidth
+    let top = this.calculatesTheValueOfAdimensionToCenterElement(
+      heightOfScreen, this.defaultSizeInPercentage)
+    let left = this.calculatesTheValueOfAdimensionToCenterElement(
+      widthOfScreen, this.defaultSizeInPercentage)
+
+
     this.setState({
-      top : top,
-      left : left
-    }) 
+      top    : top,
+      left   : left,
+      width  : this.defaultSizeInPercentage, 
+      height : this.defaultSizeInPercentage 
+    })
   }
 
 
   updatePosition = mouseEvent => {
     let x = mouseEvent.movementX
     let y = mouseEvent.movementY
-    let newTop  = this.state.top  + y
-    let newLeft = this.state.left + x
-    this.setPosition(newTop, newLeft)
+    this.setState({
+      top  : this.state.top  + y,
+      left : this.state.left + x
+    }) 
   }
 
 
@@ -44,18 +59,26 @@ class TerminalWindow extends React.Component {
   }
 
 
+  calculatesTheValueOfAdimensionToCenterElement = 
+    (dimensionOfSreen, lengthOfElementInPercentage) => {
+    let lengthOfElement = 
+        (lengthOfElementInPercentage / 100 ) * dimensionOfSreen
+    return (dimensionOfSreen - lengthOfElement) / 2 
+  } 
+
+
   render() {
     return (
       <div 
         className="terminalDialog"
         style = {{
-          "top"  : String(this.state.top)  + this.state.unit,
-          "left" : String(this.state.left) + this.state.unit
+          "top"    : String(this.state.top)  + "px",
+          "left"   : String(this.state.left) + "px",
+          "width"  : String(this.state.width)  + "%",
+          "height" : String(this.state.height)  + "%"
         }}
       >
-        <div 
-          onMouseDown={this.click}
-        >
+        <div onMouseDown={this.click} >
           <TopBar title="Terminal"/>
         </div>
         <div className="terminalScreen">

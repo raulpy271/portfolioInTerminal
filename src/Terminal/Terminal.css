@@ -3,7 +3,7 @@
   background-color: black;
   color: #0f0;
   resize: both;
-  overflow: auto;
+  overflow: hidden;
   width : 60%;
   height : 60%;
   border-radius : 10px;
