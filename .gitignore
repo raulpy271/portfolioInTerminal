@@ -25,4 +25,4 @@ yarn-error.log*
 
 # vim files
 *.swp
-*.vim
+*.vim*
