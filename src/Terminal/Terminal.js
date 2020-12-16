@@ -11,7 +11,9 @@ class TerminalWindow extends React.Component {
       top :  0,
       left : 0,
       width : 0,
-      height : 0
+      height : 0,
+      lastTouchX : 0,
+      lastTouchY : 0
     }
   }
 
@@ -37,25 +39,55 @@ class TerminalWindow extends React.Component {
   }
 
 
-  updatePosition = mouseEvent => {
-    let x = mouseEvent.movementX
-    let y = mouseEvent.movementY
+  updatePositionWhenHoldClick = clickEvent => {
     this.setState({
-      top  : this.state.top  + y,
-      left : this.state.left + x
+      top  : this.state.top  + clickEvent.movementY,
+      left : this.state.left + clickEvent.movementX
     }) 
   }
 
 
-  click = mouseEvent => {
-    document.onmousemove = this.updatePosition
-    document.onmouseup = this.endClick
+  updatePositionWhenHoldTouch = touchEvent => {
+    if (touchEvent.touches.length === 1 ) {
+      let touch = touchEvent.touches[0]
+      let movementX = touch.clientX - this.state.lastTouchX
+      let movementY = touch.clientY - this.state.lastTouchY
+      this.setState({
+        top  : this.state.top  + movementY,
+        left : this.state.left + movementX,
+        lastTouchX : touch.clientX,
+        lastTouchY : touch.clientY
+      })
+    }
   }
 
 
-  endClick = mouseEvent => {
-    document.onmousemove = null
-    document.onmouseup   = null
+  click = mouseEvent => {
+    window.onmousemove = this.updatePositionWhenHoldClick 
+    window.onmouseup = this.endClick
+  }
+
+
+  endClick = () => {
+    window.onmousemove = null
+    window.onmouseup   = null
+  }
+
+
+  touch = touchEvent => {
+    let touch = touchEvent.touches[0]
+    window.ontouchmove = this.updatePositionWhenHoldTouch
+    window.ontouchend  = this.endTouch
+    this.setState({
+      lastTouchX : touch.clientX,
+      lastTouchY : touch.clientY
+    })
+  }
+
+
+  endTouch = () => {
+    window.ontouchmove = null
+    window.ontouchend  = null
   }
 
 
@@ -78,7 +110,7 @@ class TerminalWindow extends React.Component {
           "height" : String(this.state.height)  + "%"
         }}
       >
-        <div onMouseDown={this.click} >
+        <div onMouseDown={this.click} onTouchStart={this.touch}>
           <TopBar title="Terminal"/>
         </div>
         <div className="terminalScreen">
