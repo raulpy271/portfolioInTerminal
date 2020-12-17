@@ -1,6 +1,6 @@
 .terminalDialog {
   position : fixed;
-  background-color: black;
+  background-color: rgba(0, 0, 0, 90%);
   color: #0f0;
   resize: both;
   overflow: hidden;
