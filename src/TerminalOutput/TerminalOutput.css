@@ -1,3 +1,8 @@
+.promptDiv, #promptText {
+  display: inline;
+}
+
+
 #outputText {
   white-space : break-spaces;
 }
