@@ -1,7 +1,7 @@
 import React from 'react';
 import TopBar from '../TopBar/TopBar.js'
 import TerminalOutput from '../TerminalOutput/TerminalOutput.js'
-import Content from '../content.js'
+import Content from '../Content.js'
 import './Terminal.css'
 
 

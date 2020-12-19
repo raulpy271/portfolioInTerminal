@@ -1,7 +1,7 @@
 import React from 'react'
 import TextTyped from '../TextTyped/TextTyped.js'
 import './TerminalOutput.css'
-import Content from '../content.js'
+import Content from '../Content.js'
 
 
 class TerminalOutput extends React.Component {
