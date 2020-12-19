@@ -1,6 +1,7 @@
 import React from 'react';
 import TopBar from '../TopBar/TopBar.js'
 import TerminalOutput from '../TerminalOutput/TerminalOutput.js'
+import Content from '../content.js'
 import './Terminal.css'
 
 
@@ -100,6 +101,7 @@ class TerminalWindow extends React.Component {
 
 
   render() {
+    let title = Content["title"]
     return (
       <div 
         className="terminalDialog"
@@ -111,7 +113,7 @@ class TerminalWindow extends React.Component {
         }}
       >
         <div onMouseDown={this.click} onTouchStart={this.touch}>
-          <TopBar title="Terminal"/>
+          <TopBar title={title}/>
         </div>
         <div className="terminalScreen">
           <TerminalOutput/>
