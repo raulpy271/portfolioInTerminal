@@ -1,6 +1,7 @@
 import React from 'react'
 import TextTyped from '../TextTyped/TextTyped.js'
 import './TerminalOutput.css'
+import Content from '../content.js'
 
 
 class TerminalOutput extends React.Component {
@@ -8,33 +9,43 @@ class TerminalOutput extends React.Component {
     super(props)
     this.state = {
       timeToWaitTheCommadIsTyped : 2000,
-      promptString   : "[raul@localhost]$ ",
-      sectionName    : "ASCII",
+      section        : "sections",
+      promptString   : Content["prompt"],
+      sectionName    : Content["sections"]["name"],
       sectionContent : ""
     }
   }
 
   
-  updateSection = (sectionName, sectionContent) => {
+  updateSectionNameAndClearContent = section => {
     this.setState({
-      sectionName : sectionName,
-      sectionContent : sectionContent
+      section        : section,
+      sectionName    : Content[section]["name"],
+      sectionContent : ""
     })
   }
 
 
-  componentDidMount = () => {
-    let timeToWaitAfterTheCommandIsTyped = 200
-    let sectionContent = `
-░█▄█▒▄▀▄▒█▀▄▒█▀▄░▀▄▀
-▒█▒█░█▀█░█▀▒░█▀▒░▒█▒
-`
+  updateSectionContent= section => {
+    this.setState({
+      sectionContent : Content[section]["sectionContent"]
+    })
+  }
+
+
+  changeSection = section => {
+    let timeToWaitAfterTheCommandIsTyped = 500
+    this.updateSectionNameAndClearContent(section)
     setTimeout(
-      this.updateSection, 
+      this.updateSectionContent, 
       this.state.timeToWaitTheCommadIsTyped + timeToWaitAfterTheCommandIsTyped,
-      this.state.sectionName,
-      sectionContent
+      section,
     ) 
+  }
+
+
+  componentDidMount = () => {
+    this.changeSection(this.state.section)
   }
   
 
