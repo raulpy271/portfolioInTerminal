@@ -51,6 +51,7 @@ class TerminalOutput extends React.Component {
 
   render() {
     return (
+      <>
       <div className="outputDiv">
         <div className="promptDiv">
           <p id="promptText">{this.state.promptString}</p>
@@ -60,6 +61,12 @@ class TerminalOutput extends React.Component {
         </div>
         <p id="outputText">{this.state.sectionContent}</p>
       </div>
+      <p id="sections">
+        <a href="#aboutme">About Me</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+      </p>
+      </>
     )
   }
 }
