@@ -3,11 +3,6 @@
 }
 
 
-#outputText {
-  white-space : break-spaces;
-}
-
-
 .outputDiv {
   display : block;
   position : relative;
@@ -26,13 +21,17 @@
 
 a {
   color : currentColor;
-  margin-left : 10px;
-  margin-right : 10px;
 }
 
 
 a:active {
   color : white;
+}
+
+
+#sectionsLinks {
+  margin-left : 10px;
+  margin-right : 10px;
 }
 
 
