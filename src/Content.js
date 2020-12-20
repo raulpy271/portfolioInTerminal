@@ -5,14 +5,11 @@ var Content = {
   "title"  : "Terminal",
   "sections" : {
     "name" : "sections",
-    "sectionContent" : `Hi 👋, I'm @raulpy271, 
-What are you looking for?
-
-- About me
-- Projects
-- Skills
-- Contact
-`
+    "sectionContent" : 
+  <>
+    Hi 👋, I'm <a href="www.github.com/raulpy271">@raulpy271</a>,<br/>
+    What are you looking for?
+  </>
   },
   "aboutMe" : {
     "name" : "aboutMe",
@@ -22,6 +19,23 @@ Moreover, I like to study programmer languages, functional programming, clean co
 
 Thanks for reading, feels free to send me a message 🤗
 `
+  },
+  "contact" : {
+    "name" : "contact",
+    "sectionContent" : 
+  <>
+    Feels free to send me a message, I will like to talk with you.<br/>
+    Here my contact info:<br/>
+    <ul>
+      <li>Email: 
+        <a href="mailto:raulrufino0@gmail.com">raulrufino0@gmail.com</a>
+      </li>
+      <li>My github: 
+        <a href="https://github.com/raulpy271">@raulpy271</a>
+      </li>
+    </ul>
+  </>
+
   }
 }
 
