@@ -7,9 +7,9 @@ class TextTyped extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      timeToWaitBetweenEachChar : props.totalTime / props.children.length,
+      timeToWaitBetweenEachChar : props.totalTime / props.text.length,
       textInsideTerminalText : '',
-      charsToBeShowed : props.children.split('')
+      charsToBeShowed : props.text.split('')
     }
   }
 
