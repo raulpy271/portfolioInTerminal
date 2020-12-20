@@ -11,18 +11,24 @@ class TerminalOutput extends React.Component {
       timeToWaitTheCommadIsTyped : 2000,
       section        : "sections",
       promptString   : Content["prompt"],
-      sectionName    : Content["sections"]["name"],
+      sectionName    : " ",
       sectionContent : ""
     }
   }
 
-  
+
   updateSectionNameAndClearContent = section => {
+    let text = "cat " + Content[section]["name"] + ".txt"
     this.setState({
-      section        : section,
-      sectionName    : Content[section]["name"],
+      section : section,
       sectionContent : ""
     })
+    this.textTyped.setState({
+      timeToWaitBetweenEachChar : this.state.timeToWaitTheCommadIsTyped / text.length,
+      textInsideTerminalText : '',
+      charsToBeShowed : text.split("")
+    })
+    this.textTyped.componentDidMount()
   }
 
 
@@ -52,20 +58,34 @@ class TerminalOutput extends React.Component {
   render() {
     return (
       <>
+
+
       <div className="outputDiv">
         <div className="promptDiv">
           <p id="promptText">{this.state.promptString}</p>
-          <TextTyped totalTime={this.state.timeToWaitTheCommadIsTyped}>
-            {"cat " + this.state.sectionName + ".txt"}
-          </TextTyped>
+          <TextTyped 
+            ref={ref => this.textTyped = ref}
+            totalTime={0}
+            text={this.state.sectionName}
+          />
         </div>
-        <p id="outputText">{this.state.sectionContent}</p>
+        <div id="outputText">
+          {this.state.sectionContent}
+        </div>
       </div>
+
+
       <p id="sections">
-        <a href="#aboutme">About Me</a>
-        <a href="#skills">Skills</a>
-        <a href="#contact">Contact</a>
+        <a id="sectionsLinks" 
+          onClick={() => this.changeSection("sections")}
+          href="#aboutme">About Me</a>
+        <a id="sectionsLinks" href="#skills">Skills</a>
+        <a id="sectionsLinks" 
+          onClick={() => this.changeSection("contact")}
+          href="#contact">Contact</a>
       </p>
+
+
       </>
     )
   }
