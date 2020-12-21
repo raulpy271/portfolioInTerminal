@@ -8,7 +8,7 @@ class TerminalOutput extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      timeToWaitTheCommadIsTyped : 2000,
+      timeToWaitTheCommadIsTyped : 1000,
       section        : "aboutme",
       promptString   : Content["prompt"],
       sectionName    : "",
@@ -48,7 +48,7 @@ class TerminalOutput extends React.Component {
 
 
   changeSection = section => {
-    let timeToWaitAfterTheCommandIsTyped = 500
+    let timeToWaitAfterTheCommandIsTyped = 100
     this.updateSectionNameAndClearContent(section)
     setTimeout(
       this.updateSectionContent, 
