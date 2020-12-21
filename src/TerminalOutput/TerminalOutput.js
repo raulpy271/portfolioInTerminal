@@ -11,24 +11,32 @@ class TerminalOutput extends React.Component {
       timeToWaitTheCommadIsTyped : 2000,
       section        : "sections",
       promptString   : Content["prompt"],
-      sectionName    : " ",
+      sectionName    : "",
       sectionContent : ""
     }
   }
 
 
-  updateSectionNameAndClearContent = section => {
+  updateSectionName = section => {
     let text = "cat " + Content[section]["name"] + ".txt"
+    let time = this.state.timeToWaitTheCommadIsTyped / text.length
+
+
+    this.textTyped.setState({
+      timeToWaitBetweenEachChar : time,
+      textInsideTerminalText    : '',
+      charsToBeShowed           : text.split("")
+    })
+    this.textTyped.componentDidMount()
+  }
+
+
+  updateSectionNameAndClearContent = section => {
     this.setState({
       section : section,
       sectionContent : ""
     })
-    this.textTyped.setState({
-      timeToWaitBetweenEachChar : this.state.timeToWaitTheCommadIsTyped / text.length,
-      textInsideTerminalText : '',
-      charsToBeShowed : text.split("")
-    })
-    this.textTyped.componentDidMount()
+    this.updateSectionName(section)
   }
 
 
@@ -51,25 +59,24 @@ class TerminalOutput extends React.Component {
 
 
   componentDidMount = () => {
-    this.changeSection(this.state.section)
+    window.onload = () => 
+      setTimeout(this.changeSection, 1000, this.state.section)
   }
   
 
   render() {
     return (
       <>
-
-
       <div className="outputDiv">
         <div className="promptDiv">
           <p id="promptText">{this.state.promptString}</p>
           <TextTyped 
-            ref={ref => this.textTyped = ref}
-            totalTime={0}
-            text={this.state.sectionName}
+            ref={ref => this.textTyped = ref} 
+            totalTime={0} text={""} 
           />
         </div>
         <div id="outputText">
+          <br/>
           {this.state.sectionContent}
         </div>
       </div>
@@ -84,8 +91,6 @@ class TerminalOutput extends React.Component {
           onClick={() => this.changeSection("contact")}
           href="#contact">Contact</a>
       </p>
-
-
       </>
     )
   }
