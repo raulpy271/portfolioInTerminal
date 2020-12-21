@@ -9,7 +9,7 @@ class TerminalOutput extends React.Component {
     super(props)
     this.state = {
       timeToWaitTheCommadIsTyped : 2000,
-      section        : "sections",
+      section        : "aboutme",
       promptString   : Content["prompt"],
       sectionName    : "",
       sectionContent : ""
@@ -84,9 +84,11 @@ class TerminalOutput extends React.Component {
 
       <p id="sections">
         <a id="sectionsLinks" 
-          onClick={() => this.changeSection("sections")}
+          onClick={() => this.changeSection("aboutme")}
           href="#aboutme">About Me</a>
-        <a id="sectionsLinks" href="#skills">Skills</a>
+        <a id="sectionsLinks" 
+          onClick={() => this.changeSection("skills")}
+          href="#skills">Skills</a>
         <a id="sectionsLinks" 
           onClick={() => this.changeSection("contact")}
           href="#contact">Contact</a>
