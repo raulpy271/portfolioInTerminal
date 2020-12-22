@@ -1,6 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;700&display=swap');
 
 
+body {
+  margin : 0;
+}
+
+
 .App {
     font-size : 18px;
     width : 100%;
