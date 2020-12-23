@@ -1,6 +1,10 @@
 import {useEffect} from 'react'
 import './TopBar.css'
-import {maximizeOrCentralizeScreen} from './buttonsFunction.js'
+import {
+  maximizeOrCentralizeScreen, 
+  changeTextColor,
+  changeBackgroundColors
+  } from './buttonsFunction.js'
 
 
 function Button(props) {
@@ -41,14 +45,16 @@ function TopBar(props) {
 
 
   const redButtonFunction = () => maximizeOrCentralizeScreen(element)
+  const yellowButtonFunction = () => changeTextColor(element)
+  const greenButtonFunction = () => changeBackgroundColors(element)
 
 
   return (
     <div className="topBar" >
     <div className="buttons">
     <Button onClick={redButtonFunction} color={red}/>
-    <Button onClick={redButtonFunction} color={yellow}/>
-    <Button onClick={redButtonFunction} color={green}/>
+    <Button onClick={yellowButtonFunction} color={yellow}/>
+    <Button onClick={greenButtonFunction} color={green}/>
     </div>
     <p id="title" > {props.title} </p>
     </div>
