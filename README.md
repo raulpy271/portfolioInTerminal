@@ -8,5 +8,13 @@ It's simple to edit the sections and content, so feels free to edit or use them 
 
 ## How to setup
 
+To edit the sections and put your information you can edit the file `src/Content.js`, the application will read your information from this file.
+
+If you want to add more sections, beyond the file with content, you should edit the render method of the `TerminalOutput` component, which are in the path `src/TerminalOutput/`. See the files mentioned to clearly understand how to edit.
+
 ## TODO 
+
+As always, I have created a to-do list to help me to maintain a clear path to what to do, and help others to know what do to contribute. So, feels free to make this.
+
+ - To add more sections is necessary to change two files. A good task is to make the application read the sections added and rendering them automatically, so the user will edit only one file.
 
