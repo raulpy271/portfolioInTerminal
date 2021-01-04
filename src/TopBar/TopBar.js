@@ -40,7 +40,7 @@ function TopBar(props) {
 
 
   useEffect(() => 
-    assigmentElement(document.querySelector("div.terminalDialog"))
+    assigmentElement(document.querySelector("div#terminalDialog"))
   )
 
 
@@ -50,13 +50,13 @@ function TopBar(props) {
 
 
   return (
-    <div className="topBar" >
-    <div className="buttons">
-    <Button onClick={redButtonFunction} color={red}/>
-    <Button onClick={yellowButtonFunction} color={yellow}/>
-    <Button onClick={greenButtonFunction} color={green}/>
-    </div>
-    <p id="title" > {props.title} </p>
+    <div id="topBar" >
+      <div className="buttons">
+        <Button onClick={redButtonFunction} color={red}/>
+        <Button onClick={yellowButtonFunction} color={yellow}/>
+        <Button onClick={greenButtonFunction} color={green}/>
+      </div>
+      <p id="title" > {props.title} </p>
     </div>
   )
 }
