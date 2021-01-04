@@ -7,12 +7,6 @@ import './Terminal.css'
 
 
 const TerminalWindow = () => {
-  useEffect( () => 
-    new Draggable({
-      "dialogId" : "terminalDialog",
-      "elementThatCaptureThatClickId" : "topBar"
-    })
-  )
   let title = Content["title"]
   return (
     <div id="terminalDialog">
@@ -27,4 +21,20 @@ const TerminalWindow = () => {
 }
 
 
-export default TerminalWindow
+const turnDraggable = (Component) => {
+  return ( () => {
+    useEffect( () =>
+      new Draggable({
+        "dialogId" : "terminalDialog",
+        "elementThatCaptureThatClickId" : "topBar"
+      })
+    )
+    return <Component/>
+  })
+}
+
+
+const TerminalDraggable = turnDraggable(TerminalWindow)
+
+
+export default TerminalDraggable
