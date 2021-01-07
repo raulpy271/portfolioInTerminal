@@ -26,7 +26,8 @@ const turnDraggable = (Component) => {
     useEffect( () =>
       new Draggable({
         "dialogId" : "terminalDialog",
-        "elementThatCaptureThatClickId" : "topBar"
+        "elementThatCaptureTheClick" : "topBar",
+        "centerElement" : true
       })
     )
     return <Component/>
