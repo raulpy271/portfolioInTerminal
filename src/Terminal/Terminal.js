@@ -1,5 +1,4 @@
-import {useEffect} from 'react'
-import Draggable from 'draggable_dialog'
+import turnDraggable from '../turnDraggable.js'
 import TopBar from '../TopBar/TopBar.js'
 import TerminalOutput from '../TerminalOutput/TerminalOutput.js'
 import Content from '../Content.js'
@@ -21,21 +20,11 @@ const TerminalWindow = () => {
 }
 
 
-const turnDraggable = (Component) => {
-  return ( () => {
-    useEffect( () =>
-      new Draggable({
-        "dialogId" : "terminalDialog",
-        "elementThatCaptureTheClick" : "topBar",
-        "centerElement" : true
-      })
-    )
-    return <Component/>
-  })
-}
-
-
-const TerminalDraggable = turnDraggable(TerminalWindow)
+const TerminalDraggable = turnDraggable(TerminalWindow, {
+  "dialogId" : "terminalDialog",
+  "elementThatCaptureTheClick" : "topBar",
+  "centerElement" : true
+})
 
 
 export default TerminalDraggable
