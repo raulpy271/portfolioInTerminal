@@ -1,4 +1,4 @@
-.topBar {
+#topBar {
   display : block;
   position : relative;
   color : black;
@@ -9,7 +9,7 @@
 }
 
 
-.topBar:hover {
+#topBar:hover {
   cursor : grab;
 }
 
