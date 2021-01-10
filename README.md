@@ -6,7 +6,7 @@ This is a SPA in reactJS which a MacOS terminal style. The terminal is a draggab
 
 See the [demo](https://www.raulpy271.github.io/portfolio_in_terminal_style/) page.
 
-It's simple to edit the sections and content, so feels free to edit or use them as your portfolio, [this](#how-to-setup) section will help you.
+#### To turn the terminal draggable i used this [library](https://github.com/raulpy271/DraggableDialog)
 
 ## How to setup
 
