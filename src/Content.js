@@ -15,7 +15,10 @@ I'm a computer science student for at least one year and a programmer self-stude
 Moreover, I like to study programmer languages, functional programming, clean code, and talk about Linux, open-source, and tech in general. 
   </p>
   <p>
-See the section about my programmer skills or contact me if you have an interest.
+I have developed personal projects in which I work with web apps, APIs, bots, and databases. I used concepts of functional programming, object-oriented programming, REST API, and image processing.
+  </p>
+  <p>
+See the section about my programmer skills to see my projects and languages that I used, or contact me if you have an interest.
   </p>
 </>
   },
@@ -24,13 +27,13 @@ See the section about my programmer skills or contact me if you have an interest
     "sectionContent" :
 <>
   <p>
-I used python to make projects about image processing, bot, and automation.
+To work with image processing, bots, and automation I used Python. Here's one bot that I made, and a project with image processing.
   </p>
   <p>
-I have known Javascript and ReactJs, because already make projects using these tools, including this page.
+To develop web apps and APIs I used JavaScript, ReactJs, and ExpressJS. Here's a library that I developed with this language.
   </p>
   <p>
-Besides, I knew and liked many concepts of functional programming, where I learned from the Haskell language and javascript.
+Besides, I know and like many concepts of functional programming, where I learned from the Haskell language and javascript. See a project where I used the beauty of the Haskell type system.
   </p>
   <p>
 See my <a rel="noreferrer" target="_blank" href="https://github.com/raulpy271">github account</a> to known more about these projects.
@@ -41,7 +44,7 @@ See my <a rel="noreferrer" target="_blank" href="https://github.com/raulpy271">g
     "name" : "contact",
     "sectionContent" : 
   <>
-    <p>Feels free to send me a message, I will like to talk with you.</p>
+    <p>I'm open to work on private or open-source projects, or only talk with you, so feels free to send me a message, I will like to talk.</p>
     <p>Here my contact info:</p>
     <p> 💻 <a rel="noreferrer" target="_blank" href="https://github.com/raulpy271">My github</a></p>
     <p> 👔 <a rel="noreferrer" target="_blank" href="https://www.linkedin.com/in/raulpy271/">My Linkedin</a></p>
