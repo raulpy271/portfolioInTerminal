@@ -40,10 +40,10 @@ See my <a rel="noreferrer" target="_blank" href="https://github.com/raulpy271">g
   <>
     <p>Feels free to send me a message, I will like to talk with you.</p>
     <p>Here my contact info:</p>
-    <p><a rel="noreferrer" target="_blank" href="https://github.com/raulpy271">My github</a></p>
-    <p><a rel="noreferrer" target="_blank" href="https://www.linkedin.com/in/raulpy271/">My Linkedin</a></p>
-    <p><a rel="noreferrer" target="_blank" href="https://t.me/raulpy271">My Telegram</a></p>
-    <p><a href="mailto:raulrufino0@gmail.com">raulrufino0@gmail.com</a></p>
+    <p> 💻 <a rel="noreferrer" target="_blank" href="https://github.com/raulpy271">My github</a></p>
+    <p> 👔 <a rel="noreferrer" target="_blank" href="https://www.linkedin.com/in/raulpy271/">My Linkedin</a></p>
+    <p> 📞 <a rel="noreferrer" target="_blank" href="https://t.me/raulpy271">My Telegram</a></p>
+    <p> 📨 <a href="mailto:raulrufino0@gmail.com">raulrufino0@gmail.com</a></p>
   </>
   }
 }
