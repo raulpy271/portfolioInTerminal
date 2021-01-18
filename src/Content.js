@@ -9,10 +9,13 @@ var Content = {
 <>
   <p>
 Hi 👋, I'm <a rel="noreferrer" target="_blank" href="https://www.github.com/raulpy271">@raulpy271</a>,<br/>
-I'm a computer science student for at least one year and a programmer self-student for at least two. I like to think about how to describe real problems using programming and how to write elegant code.
+I'm a computer science student for at least one year and a programmer self-student for at least two. I like to program, I like to think about how to design software, structure projects, and how to write elegant code.
   </p>
   <p>
 Moreover, I like to study programmer languages, functional programming, clean code, and talk about Linux, open-source, and tech in general. 
+  </p>
+  <p>
+See the section about my programmer skills or contact me if you have an interest.
   </p>
 </>
   },
