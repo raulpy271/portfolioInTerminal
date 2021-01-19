@@ -20,12 +20,12 @@
 
 
 a {
-  color : currentColor;
+  color : white;
 }
 
 
 a:active {
-  color : white;
+  color : currentColor;
 }
 
 
