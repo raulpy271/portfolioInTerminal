@@ -27,13 +27,13 @@ See the section about my programmer skills to see my projects and languages that
     "sectionContent" :
 <>
   <p>
-To work with image processing, bots, and automation I used Python. Here's one bot that I made, and a project with image processing.
+    To work with image processing, bots, and automation I used Python. Here's one <a rel="noreferrer" target="_blank" href="https://github.com/raulpy271/telegram_ecommerce">bot</a> that I made, and a <a rel="noreferrer" target="_blank" href="https://github.com/raulpy271/Fractals-JuliaSet">script</a> where I use image processing to create a fractal.
   </p>
   <p>
-To develop web apps and APIs I used JavaScript, ReactJs, and ExpressJS. Here's a library that I developed with this language.
+    To develop web apps and APIs I used JavaScript, ReactJs, and ExpressJS. Here's a <a rel="noreferrer" target="_blank" href="https://github.com/raulpy271/DraggableDialog">library</a> that I developed with this language.
   </p>
   <p>
-Besides, I know and like many concepts of functional programming, where I learned from the Haskell language and javascript. See a project where I used the beauty of the Haskell type system.
+    Besides, I know and like many concepts of functional programming, where I learned from the Haskell language and javascript. See a <a rel="noreferrer" target="_blank" href="https://github.com/raulpy271/ValidationMethods">package</a> where I used the beauty of the Haskell type system.
   </p>
   <p>
 See my <a rel="noreferrer" target="_blank" href="https://github.com/raulpy271">github account</a> to known more about these projects.
