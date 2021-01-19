@@ -20,3 +20,27 @@
 }
 
 
+@media only screen and (max-width: 800px) {
+#terminalDialog {
+  width  : 75%;
+  height : 75%;
+}
+}
+
+
+@media only screen and (max-width: 500px) {
+#terminalDialog {
+  width  : 85%;
+  height : 85%;
+}
+}
+
+
+@media only screen and (max-width: 400px) {
+#terminalDialog {
+  width  : 95%;
+  height : 95%;
+}
+}
+
+
