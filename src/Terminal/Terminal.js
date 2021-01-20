@@ -1,12 +1,12 @@
 import turnDraggable from '../turnDraggable.js'
 import TopBar from '../TopBar/TopBar.js'
 import TerminalOutput from '../TerminalOutput/TerminalOutput.js'
-import Content from '../Content.js'
+import {getSection} from '../text/textManager.js'
 import './Terminal.css'
 
 
 const TerminalWindow = () => {
-  let title = Content["title"]
+  let title = getSection("title")
   return (
     <div id="terminalDialog">
       <div>

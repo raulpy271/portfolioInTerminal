@@ -1,7 +1,7 @@
 import React from 'react'
 import TextTyped from '../TextTyped/TextTyped.js'
 import './TerminalOutput.css'
-import Content from '../Content.js'
+import {getSection} from '../text/textManager.js'
 
 
 class TerminalOutput extends React.Component {
@@ -10,40 +10,16 @@ class TerminalOutput extends React.Component {
     this.state = {
       timeToWaitTheCommadIsTyped : 1000,
       section        : "aboutme",
-      promptString   : Content["prompt"],
+      promptString   : getSection("prompt"),
       sectionName    : "",
       sectionContent : ""
     }
   }
 
 
-  updateSectionName = section => {
-    let text = "cat " + Content[section]["name"] + ".txt"
-    let time = this.state.timeToWaitTheCommadIsTyped / text.length
-
-
-    this.textTyped.setState({
-      timeToWaitBetweenEachChar : time,
-      textInsideTerminalText    : '',
-      charsToBeShowed           : text.split("")
-    })
-    this.textTyped.componentDidMount()
-  }
-
-
-  updateSectionNameAndClearContent = section => {
-    this.setState({
-      section : section,
-      sectionContent : ""
-    })
-    this.updateSectionName(section)
-  }
-
-
-  updateSectionContent= section => {
-    this.setState({
-      sectionContent : Content[section]["sectionContent"]
-    })
+  componentDidMount = () => {
+    window.onload = () => 
+      setTimeout(this.changeSection, 1000, this.state.section)
   }
 
 
@@ -58,11 +34,35 @@ class TerminalOutput extends React.Component {
   }
 
 
-  componentDidMount = () => {
-    window.onload = () => 
-      setTimeout(this.changeSection, 1000, this.state.section)
+  updateSectionNameAndClearContent = section => {
+    this.setState({
+      section : section,
+      sectionContent : ""
+    })
+    this.updateSectionName(section)
   }
-  
+
+
+  updateSectionName = section => {
+    let text = "cat " + section + ".txt"
+    let time = this.state.timeToWaitTheCommadIsTyped / text.length
+
+
+    this.textTyped.setState({
+      timeToWaitBetweenEachChar : time,
+      textInsideTerminalText    : '',
+      charsToBeShowed           : text.split("")
+    })
+    this.textTyped.componentDidMount()
+  }
+
+
+  updateSectionContent = section => {
+    this.setState({
+      sectionContent : getSection(section)
+    })
+  }
+
 
   render() {
     return (
