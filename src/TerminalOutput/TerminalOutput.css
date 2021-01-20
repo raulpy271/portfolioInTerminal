@@ -20,18 +20,24 @@
 
 
 a {
-  color : white;
+  color: currentColor;
 }
 
 
 a:active {
-  color : currentColor;
+  color : white;
 }
 
 
 #sectionsLinks {
+  color : white;
   margin-left : 10px;
   margin-right : 10px;
+}
+
+
+#sectionsLinks:active {
+  opacity: 50%;
 }
 
 

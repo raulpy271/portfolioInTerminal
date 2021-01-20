@@ -46,7 +46,7 @@ See my <a rel="noreferrer" target="_blank" href="https://github.com/raulpy271">g
   <>
     <p>I'm open to work on private or open-source projects, or only talk with you, so feels free to send me a message, I will like to talk.</p>
     <p>Here my contact info:</p>
-    <p> 💻 <a rel="noreferrer" target="_blank" href="https://github.com/raulpy271">My github</a></p>
+    <p> 💻 <a rel="noreferrer" target="_blank" href="https://github.com/raulpy271">My Github</a></p>
     <p> 👔 <a rel="noreferrer" target="_blank" href="https://www.linkedin.com/in/raulpy271/">My Linkedin</a></p>
     <p> 📞 <a rel="noreferrer" target="_blank" href="https://t.me/raulpy271">My Telegram</a></p>
     <p> 📨 <a href="mailto:raulrufino0@gmail.com">raulrufino0@gmail.com</a></p>
