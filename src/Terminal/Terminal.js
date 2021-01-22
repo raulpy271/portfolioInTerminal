@@ -1,4 +1,4 @@
-import turnDraggable from '../turnDraggable.js'
+import turnDraggable from '../utils/turnDraggable.js'
 import TopBar from '../TopBar/TopBar.js'
 import TerminalOutput from '../TerminalOutput/TerminalOutput.js'
 import {getSection} from '../text/textManager.js'
