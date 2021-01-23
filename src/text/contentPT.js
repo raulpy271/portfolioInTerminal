@@ -44,6 +44,12 @@ Veja minha conta no <a rel="noreferrer" target="_blank" href="https://github.com
 
   "contact" : (
   <>
+    <p>Eu estou aberto para trabalhar em projetos privados ou open-source, ou somente conversar com você, então sinta-se livre para me enviar uma mensagem, eu gostarei de conversar.</p>
+    <p>Veja minhas informações de contato:</p>
+    <p> 💻 <a rel="noreferrer" target="_blank" href="https://github.com/raulpy271">Meu Github</a></p>
+    <p> 👔 <a rel="noreferrer" target="_blank" href="https://www.linkedin.com/in/raulpy271/">Meu Linkedin</a></p>
+    <p> 📞 <a rel="noreferrer" target="_blank" href="https://t.me/raulpy271">Meu Telegram</a></p>
+    <p> 📨 <a href="mailto:raulrufino0@gmail.com">raulrufino0@gmail.com</a></p>
   </>
   )
 }
