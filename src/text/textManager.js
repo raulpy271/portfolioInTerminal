@@ -12,6 +12,7 @@ const languages = {
 class TextManager {
   constructor(languages, defaultLanguage) {
     this.languages = languages
+    this.supportedLanguages = Object.keys(languages)
     this.actualLanguage = defaultLanguage
   }
 
@@ -22,7 +23,11 @@ class TextManager {
 
 
   changeLanguage = language => {
-    this.actualLanguage = language
+    if (this.supportedLanguages.includes(language)) {
+      this.actualLanguage = language
+    } else {
+      throw new Error("Unsuported language: " + language )
+    }
   }
 }
 
