@@ -26,6 +26,18 @@ Veja a seção sobre minhas skills para ver meus projetos e linguagens que eu us
 
   "skills" : (
 <>
+  <p>
+Para trabalhar com processamento de imagem, bots, e automações eu usei Python. Aqui está um <a rel="noreferrer" target="_blank" href="https://github.com/raulpy271/telegram_ecommerce">bot</a> que eu escrevi, e um <a rel="noreferrer" target="_blank" href="https://github.com/raulpy271/Fractals-JuliaSet">script</a> onde usei processamento de imagens para criar um fractal.
+  </p>
+  <p>
+Para desenvolver web apps e APIs eu utilizei JavaScript, ReactJs e ExpressJS. Veja uma <a rel="noreferrer" target="_blank" href="https://github.com/raulpy271/DraggableDialog">biblioteca</a> que eu desenvolvi com essa linguagem.
+  </p>
+  <p>
+Além disso, eu conheço vários conceitos de programação funcional, onde aprendi da linguagem Haskell e JavaScript. Veja esse <a rel="noreferrer" target="_blank" href="https://github.com/raulpy271/ValidationMethods">pacote</a> onde eu usei a beleza do sistema de tipos do Haskell.
+  </p>
+  <p>
+Veja minha conta no <a rel="noreferrer" target="_blank" href="https://github.com/raulpy271">Github</a> para conhecer mais sobre esses projetos.
+  </p>
 </>
   ),
 
