@@ -23,11 +23,16 @@ class TextManager {
 
 
   changeLanguage = language => {
-    if (this.supportedLanguages.includes(language)) {
+    if (this.isValid(language)) {
       this.actualLanguage = language
     } else {
       throw new Error("Unsuported language: " + language )
     }
+  }
+
+
+  isValid = language => {
+    return this.supportedLanguages.includes(language)
   }
 }
 
@@ -42,4 +47,7 @@ const getSection = portfolioTextWithTwoLanguages.getSection
 const changeLanguage = portfolioTextWithTwoLanguages.changeLanguage
 
 
-export {getSection, changeLanguage}
+const isValidLanguage = portfolioTextWithTwoLanguages.isValid
+
+
+export {getSection, changeLanguage, isValidLanguage}
