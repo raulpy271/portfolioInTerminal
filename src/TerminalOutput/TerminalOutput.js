@@ -1,8 +1,9 @@
 import React from 'react'
 import TextTyped from '../TextTyped/TextTyped.js'
+import {getSection} from '../text/textManager.js'
+import {
+  setLanguageFromQueryParamOrBrowserLanguage} from '../utils/languages.js'
 import './TerminalOutput.css'
-import {getSection, changeLanguage} from '../text/textManager.js'
-import {getBrowserLanguage} from '../utils/languages.js'
 
 
 class TerminalOutput extends React.Component {
@@ -20,7 +21,7 @@ class TerminalOutput extends React.Component {
 
   componentDidMount = () => {
     window.onload = () => {
-      changeLanguage(getBrowserLanguage())
+      setLanguageFromQueryParamOrBrowserLanguage()
       setTimeout(this.changeSection, 1000, this.state.section)
     } 
   }
