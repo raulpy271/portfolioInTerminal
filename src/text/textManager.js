@@ -17,8 +17,13 @@ class TextManager {
   }
 
 
-  getSection = section => {
-    return this.languages[this.actualLanguage][section]
+  getSectionContent = section => {
+    return this.languages[this.actualLanguage][section]["content"]
+  }
+
+
+  getSectionName = section => {
+    return this.languages[this.actualLanguage][section]["name"]
   }
 
 
@@ -31,8 +36,13 @@ class TextManager {
   }
 
 
-  isValid = language => {
-    return this.supportedLanguages.includes(language)
+  isValid = language => this.supportedLanguages.includes(language)
+
+
+  getSectionNames = () => {
+    let contentInAEspecificLanguage = this.languages[this.actualLanguage]
+    let sectionNames = Object.keys(contentInAEspecificLanguage)
+    return sectionNames
   }
 }
 
@@ -41,7 +51,10 @@ const portfolioTextWithTwoLanguages =
   new TextManager(languages, defaultLanguage)
 
 
-const getSection = portfolioTextWithTwoLanguages.getSection
+const getSectionContent = portfolioTextWithTwoLanguages.getSectionContent
+
+
+const getSectionName = portfolioTextWithTwoLanguages.getSectionName
 
 
 const changeLanguage = portfolioTextWithTwoLanguages.changeLanguage
@@ -50,4 +63,4 @@ const changeLanguage = portfolioTextWithTwoLanguages.changeLanguage
 const isValidLanguage = portfolioTextWithTwoLanguages.isValid
 
 
-export {getSection, changeLanguage, isValidLanguage}
+export {getSectionName, getSectionContent, changeLanguage, isValidLanguage}
