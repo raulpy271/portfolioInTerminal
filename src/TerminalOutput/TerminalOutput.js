@@ -1,6 +1,7 @@
 import React from 'react'
 import TextTyped from '../TextTyped/TextTyped.js'
-import {getSection} from '../text/textManager.js'
+import SectionBar from '../SectionBar/SectionBar.js'
+import {getSectionContent} from '../text/textManager.js'
 import {
   setLanguageFromQueryParamOrBrowserLanguage} from '../utils/languages.js'
 import './TerminalOutput.css'
@@ -12,18 +13,16 @@ class TerminalOutput extends React.Component {
     this.state = {
       timeToWaitTheCommadIsTyped : 1000,
       section        : "aboutme",
-      promptString   : getSection("prompt"),
+      promptString   : "[raul@fedora32]$ ",
       sectionName    : "",
-      sectionContent : ""
+      sectionContent : "",
     }
   }
 
 
   componentDidMount = () => {
-    window.onload = () => {
-      setLanguageFromQueryParamOrBrowserLanguage()
-      setTimeout(this.changeSection, 1000, this.state.section)
-    } 
+    setLanguageFromQueryParamOrBrowserLanguage()
+    setTimeout(this.changeSection, 1000, this.state.section)
   }
 
 
@@ -63,7 +62,7 @@ class TerminalOutput extends React.Component {
 
   updateSectionContent = section => {
     this.setState({
-      sectionContent : getSection(section)
+      sectionContent : getSectionContent(section)
     })
   }
 
@@ -86,17 +85,9 @@ class TerminalOutput extends React.Component {
       </div>
 
 
-      <p id="sections">
-        <a id="sectionsLinks" 
-          onClick={() => this.changeSection("aboutme")}
-          href="#aboutme">About Me</a>
-        <a id="sectionsLinks" 
-          onClick={() => this.changeSection("skills")}
-          href="#skills">Skills</a>
-        <a id="sectionsLinks" 
-          onClick={() => this.changeSection("contact")}
-          href="#contact">Contact</a>
-      </p>
+      <>
+        <SectionBar onClick={this.changeSection}/>
+      </>
       </>
     )
   }
