@@ -11,14 +11,6 @@
 }
 
 
-#sections {
-  text-align: center;
-  position : absolute;
-  bottom   : 0%;
-  width    : 100%;
-}
-
-
 a {
   color: currentColor;
 }
@@ -26,18 +18,6 @@ a {
 
 a:active {
   color : white;
-}
-
-
-#sectionsLinks {
-  color : white;
-  margin-left : 10px;
-  margin-right : 10px;
-}
-
-
-#sectionsLinks:active {
-  opacity: 50%;
 }
 
 
