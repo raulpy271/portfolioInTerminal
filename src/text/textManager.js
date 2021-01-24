@@ -57,10 +57,21 @@ const getSectionContent = portfolioTextWithTwoLanguages.getSectionContent
 const getSectionName = portfolioTextWithTwoLanguages.getSectionName
 
 
+const getSectionNames = portfolioTextWithTwoLanguages.getSectionNames
+
+
 const changeLanguage = portfolioTextWithTwoLanguages.changeLanguage
 
 
 const isValidLanguage = portfolioTextWithTwoLanguages.isValid
 
 
-export {getSectionName, getSectionContent, changeLanguage, isValidLanguage}
+export {
+  getSectionName, 
+  getSectionNames, 
+  getSectionContent, 
+  changeLanguage, 
+  isValidLanguage
+}
+
+
