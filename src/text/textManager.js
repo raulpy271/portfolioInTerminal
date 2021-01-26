@@ -66,10 +66,14 @@ const changeLanguage = portfolioTextWithTwoLanguages.changeLanguage
 const isValidLanguage = portfolioTextWithTwoLanguages.isValid
 
 
+const supportedLanguages = portfolioTextWithTwoLanguages.supportedLanguages
+
+
 export {
   getSectionName, 
   getSectionNames, 
   getSectionContent, 
+  supportedLanguages,
   changeLanguage, 
   isValidLanguage
 }
