@@ -1,7 +1,7 @@
 
 
 var ButtonStates = {
-  "isCentralized" : true,
+  "isHide" : true,
   "textColorsSelected" : 0,
   "backgroundColorsSelected" : 0,
   "textColors" : ["#0f0", "red", "yellow"],
@@ -40,20 +40,8 @@ const nextTextColors = colorObj => {
 }
 
 
-const maximizeScreen = element => {
-  element.style.top    = "1%"
-  element.style.left   = "1%"
-  element.style.width  = "98%"
-  element.style.height = "98%"
-}
-
-
-const centralizeScreen = element => {
-  element.style.top    = "20%"
-  element.style.left   = "20%"
-  element.style.width  = "60%"
-  element.style.height = "60%"
-}
+const addDisplayPropertyToElement = (element, property) =>
+  element.style.display = property
 
 
 const changeTextColor = element => 
@@ -64,11 +52,14 @@ const changeBackgroundColors = element =>
   element.style.backgroundColor = nextBackgroundColors(ButtonStates)
 
 
-const maximizeOrCentralizeScreen = element => {
-  if (ButtonStates["isCentralized"]) maximizeScreen(element)
-  else centralizeScreen(element)
-  ButtonStates["isCentralized"] = ! ButtonStates["isCentralized"]
+const hideOrShowElement = element => {
+  if (ButtonStates["isHide"]) {
+    addDisplayPropertyToElement(element, "inline")
+  } else {
+    addDisplayPropertyToElement(element, "none")
+  }
+  ButtonStates["isHide"] = ! ButtonStates["isHide"]
 }
 
 
-export {maximizeOrCentralizeScreen, changeTextColor, changeBackgroundColors}
+export {hideOrShowElement, changeTextColor, changeBackgroundColors}
