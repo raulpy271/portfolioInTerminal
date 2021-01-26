@@ -1,4 +1,5 @@
 import {useEffect} from 'react'
+import Languages from '../Languages/Languages.js'
 import './TopBar.css'
 import {
   maximizeOrCentralizeScreen, 
@@ -52,6 +53,7 @@ function TopBar(props) {
   return (
     <div id="topBar" >
       <div className="buttons">
+        <Languages/>
         <Button onClick={redButtonFunction} color={red}/>
         <Button onClick={yellowButtonFunction} color={yellow}/>
         <Button onClick={greenButtonFunction} color={green}/>
@@ -62,4 +64,4 @@ function TopBar(props) {
 }
 
 
-export default TopBar;
+export default TopBar
