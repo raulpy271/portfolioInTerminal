@@ -19,7 +19,9 @@ class SectionBar extends React.Component {
   renderSection = () => {
     let renderedSection = (
       <> {getSectionNames().map(sectionName => 
-        <a key={sectionName}
+        <a
+          className="sectionLinks"
+          key={sectionName}
           onClick={() => this.props.onClick(sectionName)}
           href={"#" + sectionName}
         >
