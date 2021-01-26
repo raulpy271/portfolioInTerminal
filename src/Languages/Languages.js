@@ -1,4 +1,4 @@
-import {getLanguages} from '../text/textManager.js'
+import {supportedLanguages} from '../text/textManager.js'
 import './Languages.css'
 
 
@@ -15,7 +15,7 @@ const convertLanguageInStringToElement = language => (
 
 const Languages = () => {
   let allLanguagesComponent = (
-    getLanguages().map(convertLanguageInStringToElement)
+    supportedLanguages.map(convertLanguageInStringToElement)
   )
 
 
