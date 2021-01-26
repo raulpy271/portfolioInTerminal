@@ -1,8 +1,7 @@
-import {useEffect} from 'react'
 import Languages from '../Languages/Languages.js'
 import './TopBar.css'
 import {
-  maximizeOrCentralizeScreen, 
+  hideOrShowElement, 
   changeTextColor,
   changeBackgroundColors
   } from './buttonsFunction.js'
@@ -29,25 +28,20 @@ function Button(props) {
 
 
 function TopBar(props) {
-  let element
   let red    = "#f00"
   let yellow = "#ff0"
   let green  = "#0f0"
 
 
-  const assigmentElement = elementFromEffect => {
-    element = elementFromEffect
-  }
-
-
-  useEffect(() => 
-    assigmentElement(document.querySelector("div#terminalDialog"))
+  const redButtonFunction = () => hideOrShowElement(
+    document.querySelector("div.languages")
   )
-
-
-  const redButtonFunction = () => maximizeOrCentralizeScreen(element)
-  const yellowButtonFunction = () => changeTextColor(element)
-  const greenButtonFunction = () => changeBackgroundColors(element)
+  const yellowButtonFunction = () => changeTextColor(
+    document.querySelector("div#terminalDialog")
+  )
+  const greenButtonFunction = () => changeBackgroundColors(
+    document.querySelector("div#terminalDialog")
+  )
 
 
   return (
