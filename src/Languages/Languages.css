@@ -1,0 +1,13 @@
+.languages {
+  display  : none;
+  position : relative;
+  top      : -2px;
+}
+
+
+.language {
+  font-size   : 15px;
+  margin-left : 6px;
+}
+
+
