@@ -7,7 +7,7 @@ class Cursor extends React.Component {
     super(props)
     this.state  = {
       cursorChar : '█',
-      timeToUpdate   : 1000,
+      timeToUpdate   : 500,
       cursorOnStatus : true,
       opacity : 100
     }
