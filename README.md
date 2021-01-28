@@ -36,9 +36,4 @@ After all, run the command:
 npm run deploy
 ```
 
-## TODO 
-
-As always, I have created a to-do list to help me to maintain a clear path to what to do, and help others to know what do to contribute. So, feels free to make this.
-
- - To add more sections is necessary to change two files. A good task is to make the application read the sections added and rendering them automatically, so the user will edit only one file.
 
