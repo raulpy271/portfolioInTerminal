@@ -12,11 +12,17 @@ If you are interested in using this app for your portfolio, see the sections: [H
 
 ## How to setup
 
-To use this page, first fork this repository and clone in your machine, so you will put your information.
+To use this page, first fork this repository and clone it on your machine, so you will put your information.
 
-To edit the sections and put your information you can edit the file `src/Content.js`, the application will read your information from this file.
+To edit the sections and put your information you should edit the `contentEN` object in the `src/text/` path.
 
-If you want to add more sections, beyond the file with content, you should edit the render method of the `TerminalOutput` component, which are in the path `src/TerminalOutput/`. See the files mentioned to clearly understand how to edit.
+Besides, and you can and add more sections creating more properties to the object. 
+
+Or if you want to add support to another language you should create an object like these in the mentioned path and import it in the `src/text/textManager.js` file.
+
+Read the files of the `src/text/` path and you'll understand more about how to edit, add more sections, or support for multiples languages. 
+
+If something isn't clear feels free to open an issue.
 
 ## Deploy
 
