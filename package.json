@@ -34,7 +34,7 @@
     ]
   },
   "description": "A portfolio template in ReactJS for developers with terminal style",
-  "homepage": "https://raulpy271.github.io/portfolioInTerminal"
+  "homepage": "https://raulpy271.github.io/portfolioInTerminal",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/raulpy271/portfolioInTerminal.git"
