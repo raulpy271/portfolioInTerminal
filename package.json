@@ -13,7 +13,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d build",
+    "deploy:homepage": 
+      "npm run build && gh-pages -d build -o homepage -r https://github.com/raulpy271/raulpy271.github.io"
   },
   "eslintConfig": {
     "extends": [
@@ -34,7 +36,7 @@
     ]
   },
   "description": "A portfolio template in ReactJS for developers with terminal style",
-  "homepage": "https://raulpy271.github.io/portfolioInTerminal",
+  "homepage": "https://raulpy271.github.io/",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/raulpy271/portfolioInTerminal.git"
