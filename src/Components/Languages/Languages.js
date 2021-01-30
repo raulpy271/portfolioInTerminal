@@ -1,4 +1,4 @@
-import {supportedLanguages} from '../text/textManager.js'
+import {supportedLanguages} from '../../text/textManager.js'
 import './Languages.css'
 
 
