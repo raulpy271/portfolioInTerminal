@@ -1,6 +1,6 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import TerminalWindow from './Terminal/Terminal.js'
+import React from 'react'
+import ReactDOM from 'react-dom'
+import TerminalWindow from './Components/Terminal/Terminal.js'
 
 
 ReactDOM.render(
@@ -8,6 +8,6 @@ ReactDOM.render(
     <TerminalWindow/>
   </React.StrictMode>,
   document.getElementById('root')
-);
+)
 
 
