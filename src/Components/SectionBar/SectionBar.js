@@ -1,5 +1,5 @@
 import React from 'react'
-import {getSectionNames, getSectionName} from '../text/textManager.js'
+import {getSectionNames, getSectionName} from '../../text/textManager.js'
 import './SectionBar.css'
 
 

@@ -1,9 +1,10 @@
 import React from 'react'
 import TextTyped from '../TextTyped/TextTyped.js'
 import SectionBar from '../SectionBar/SectionBar.js'
-import {getSectionContent} from '../text/textManager.js'
+import {getSectionContent} from '../../text/textManager.js'
 import {
-  setLanguageFromQueryParamOrBrowserLanguage} from '../utils/languages.js'
+  setLanguageFromQueryParamOrBrowserLanguage
+} from '../../utils/languages.js'
 import './TerminalOutput.css'
 
 
