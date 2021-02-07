@@ -2,7 +2,7 @@
 
 ![Terminal in browser](/public/example.gif)
 
-This is a SPA in reactJS which a MacOS terminal style. The terminal is a draggable and resizable React component and has sections about me, so it's will is my personal portfolio for while. 
+This is a SPA in reactJS with a MacOS terminal style. The terminal is a draggable and resizable React component and has sections about me, so it's will be my personal portfolio for while.
 
 See the [demo](https://raulpy271.github.io) page.
 
@@ -12,15 +12,13 @@ If you are interested in using this app for your portfolio, see the sections: [H
 
 ## How to setup
 
-To use this page, first fork this repository and clone it on your machine, so you will put your information.
+To use this page, first fork this repository and clone it on your machine, so you will can add your information.
 
-To edit the sections and put your information you should edit the `contentEN` object in the `src/text/` path.
-
-Besides, and you can and add more sections creating more properties to the object. 
+To edit the sections and put your information you should edit the `contentEN` object in the `src/text/` path. Besides, you can add more sections creating more properties to the object.
 
 Or if you want to add support to another language you should create an object like these in the mentioned path and import it in the `src/text/textManager.js` file.
 
-Read the files of the `src/text/` path and you'll understand more about how to edit, add more sections, or support for multiples languages. 
+Read the files of the `src/text/` path and you'll understand more about how to edit, add more sections, or support for multiples languages.
 
 If something isn't clear feels free to open an issue.
 
@@ -36,10 +34,17 @@ npm install gh-pages --save-dev
 
 Put the link of your homepage in the `homepage` properties of `package.json`, the link is like this `http://{username}.github.io/{repo-name}`.
 
-After all, run the command: 
+After all, run the command:
 
 ```sh
 npm run deploy
 ```
 
+And the application will be deployed in the `homepage` link.
+
+## Deploy in a another repository
+
+Following the steps above, I get a repository with the source code in the branch `main` and another branch with the bundled version of the source. Besides, I get the link `https://raulpy271.github.io/portfolioInTerminal` to access the page.
+
+The problem is that this link is too large, I want to use `https://raulpy271.github.io`.
 
