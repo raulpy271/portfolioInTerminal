@@ -42,9 +42,29 @@ npm run deploy
 
 And the application will be deployed in the `homepage` link.
 
-## Deploy in a another repository
+## Deploy in another repository
 
 Following the steps above, I get a repository with the source code in the branch `main` and another branch with the bundled version of the source. Besides, I get the link `https://raulpy271.github.io/portfolioInTerminal` to access the page.
 
-The problem is that this link is too large, I want to use `https://raulpy271.github.io`.
+The problem is that this link is too large, I want to use `https://raulpy271.github.io`. To use it, the user should create a repository named `{username}.github.io`.
+
+But to deploy it, I should explicitly tell to github pages the new repository link. To make this I will add a remote branch in git and use this branch in the command `gh-pages`, See the steps:
+
+```sh
+git remote add homepage https://github.com/raulpy271/raulpy271.github.io
+```
+
+I added a new remote called `homepage`, and then will create a new bundled source in the directory `build`:
+
+```sh
+npx react-scripts build
+```
+
+And then I will use the files of the above directory and the new remote branch in `gh-pages`:
+
+```sh
+npx gh-pages -d build -o homepage
+```
+
+Now, the app is deployed 🚀! And I get a short link and a separate version with the production-ready code.
 
